@@ -8,7 +8,14 @@ var app = express();
 // view engine setup
 app.set("views", __dirname + "/views");
 app.set("view engine", "jsx");
-app.engine("jsx", require("express-react-views").createEngine());
+app.engine("jsx", require("express-react-views").createEngine({
+   babel: {
+      presets: [
+         "@babel/preset-react",
+         ["@babel/preset-env", { targets: { node: "current" } }],
+      ],
+   },
+}));
 
 app.use(logger("dev"));
 app.use(express.json());
@@ -23,8 +30,8 @@ app.get("/", (req, res) =>
    })
 );
 
-app.post("/html-to-notion", require("./routes/htmlToNotion").index);
-app.post("/:pageId", require("./routes").index);
+app.all("/html-to-notion", require("./routes/htmlToNotion").index);
+app.all("/:pageId", require("./routes").index);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
