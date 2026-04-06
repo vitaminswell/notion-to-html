@@ -2,6 +2,7 @@
    "name": "notion-api-3---express",
    "version": "0.0.0",
    "private": true,
+   "main": "api/index.js",
    "scripts": {
       "start": "node ./bin/www"
    },
@@ -15,7 +16,7 @@
       "http-errors": "~1.6.3",
       "jade": "~1.11.0",
       "morgan": "~1.9.1",
-      "node-fetch": "^3.2.3",
+      "node-fetch": "^2.6.9",
       "probe-image-size": "^7.2.3",
       "react": "^16.0.0",
       "react-dom": "^16.0.0",
