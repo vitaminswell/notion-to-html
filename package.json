@@ -7,10 +7,6 @@
       "start": "node ./bin/www"
    },
    "dependencies": {
-      "@babel/core": "^7.27.1",
-      "@babel/preset-env": "^7.27.1",
-      "@babel/preset-react": "^7.27.1",
-      "@babel/register": "^7.27.1",
       "@notionhq/client": "^1.0.4",
       "@tryfabric/martian": "^1.2.4",
       "cloudinary": "^1.29.0",

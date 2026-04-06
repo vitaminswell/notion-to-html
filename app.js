@@ -7,11 +7,11 @@ var { renderToStaticMarkup } = require("react-dom/server");
 
 var app = express();
 
-// Custom JSX view engine — uses react-dom/server directly, no express-react-views.
-// Babel registration happens in api/index.js before this file is loaded.
+// View engine: loads pre-compiled views/index.js (compiled from index.jsx at dev time).
+// No Babel required at runtime.
 app.set("views", __dirname + "/views");
-app.set("view engine", "jsx");
-app.engine("jsx", function (filePath, options, callback) {
+app.set("view engine", "js");
+app.engine("js", function (filePath, options, callback) {
    try {
       delete require.cache[require.resolve(filePath)];
       var Component = require(filePath);
