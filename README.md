@@ -9,7 +9,7 @@ If you want to convert a public Notion page to HTML. Use this [API by @asnunes](
 
 1. Create a Notion integration at [notion.so/my-integrations](https://www.notion.so/my-integrations) and provide access to the databases you want to use.
 2. To authorize each request, add a `token` parameter in the request body and set the value to the `Internal Integration Token` of your Notion integration
-3. Get the HTML of any page at `https://notion-to-html.herokuapp.com/[pageId]`.
+3. Get the HTML of any page at `https://notion-to-html.[service]/[pageId]`.
 
 How to get the pageId? Get it with an integration or [see how get it manually](https://developers.notion.com/docs/working-with-page-content#creating-a-page-with-content:~:text=Where%20can%20I%20find%20my%20page%27s%20ID%3F) (go to "Where can I find my page's ID?").
 
