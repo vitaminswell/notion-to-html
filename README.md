@@ -19,7 +19,7 @@ How to get the pageId? Get it with an integration or [see how get it manually](h
 -  Run `npm install` to install dependencies
 -  Run `npm run start` to start the development server on `localhost:3000`
 
-For production deployment I recommend [Heroku](https://heroku.com/deploy?template=https://github.com/mchlkucera/notion-to-html)
+For production deployment I recommend Vercel
 
 ### Error codes
 
