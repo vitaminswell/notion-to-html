@@ -7,6 +7,7 @@
       "start": "node ./bin/www"
    },
    "dependencies": {
+      "@babel/plugin-transform-flow-strip-types": "^7.27.1",
       "@notionhq/client": "^1.0.4",
       "@tryfabric/martian": "^1.2.4",
       "cloudinary": "^1.29.0",
